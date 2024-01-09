@@ -1,0 +1,44 @@
+*,
+*:focus {
+  box-sizing: border-box;
+  outline: none;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.main-container {
+  width: 400px;
+}
+h1 {
+  text-align: center;
+}
+.control {
+  display: flex;
+  gap: 10px;
+}
+input {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+}
+button {
+  border: 1px solid #eee;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #009688;
+  color: white;
+}
+.result {
+  margin-top: 10px;
+}
+span {
+  font-weight: bold;
+}
