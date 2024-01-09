@@ -2,6 +2,9 @@ const btn = document.querySelector("button");
 const input = document.querySelector("input");
 const resultSpan = document.querySelector(".result-span");
 const NumberToText = (Number) => {
+  if (Number < 0) {
+    return "Minus " + NumberToText(Number * -1);
+  }
   if (Number == 0) {
     return "";
   }
