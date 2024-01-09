@@ -54,6 +54,12 @@ const NumberToText = (Number) => {
   if (Number >= 2000000 && Number <= 999999999) {
     return NumberToText(Math.trunc(Number / 1000000)) + " Milions " + NumberToText(Number % 1000000);
   }
+  if (Number >= 1000000000 && Number <= 1999999999) {
+    return "One Bilion " + NumberToText(Number % 1000000000);
+  }
+  if (Number >= 2000000000) {
+    return NumberToText(Math.trunc(Number / 1000000000)) + " Bilions " + NumberToText(Number % 1000000000);
+  }
 };
 btn.addEventListener("click", () => {
   let value = input.value.trim();
