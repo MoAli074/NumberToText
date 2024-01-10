@@ -64,9 +64,9 @@ const NumberToText = (Number) => {
   }
 };
 const showResult = () => {
-  let value = input.value.trim();
-  if (value.length != 0 && !isNaN(parseInt(value))) {
-    if (parseInt(value) == 0) {
+  let value = parseInt(input.value.trim());
+  if (value.length != 0 && !isNaN(value)) {
+    if (value == 0) {
       resultSpan.textContent = "Zero";
     } else {
       resultSpan.textContent = NumberToText(value);
