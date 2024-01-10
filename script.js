@@ -42,8 +42,7 @@ const NumberToText = (Number) => {
     return "One Hundred " + NumberToText(Number % 100);
   }
   if (Number >= 200 && Number <= 999) {
-    let list = ["", "", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-    return list[Math.trunc(Number / 100)] + " Hundreds " + NumberToText(Number % 100);
+    return NumberToText(Math.trunc(Number / 100)) + " Hundreds " + NumberToText(Number % 100);
   }
   if (Number >= 1000 && Number <= 1999) {
     return "One Thousand " + NumberToText(Number % 1000);
