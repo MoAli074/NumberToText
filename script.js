@@ -67,6 +67,10 @@ const NumberToText = (Number) => {
 btn.addEventListener("click", () => {
   let value = input.value.trim();
   if (value.length != 0 && !isNaN(parseInt(value))) {
-    resultSpan.textContent = NumberToText(value);
+    if (parseInt(value) == 0) {
+      resultSpan.textContent = "Zero";
+    } else {
+      resultSpan.textContent = NumberToText(value);
+    }
   }
 });
