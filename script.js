@@ -63,7 +63,7 @@ const NumberToText = (Number) => {
     return NumberToText(Math.trunc(Number / 1000000000)) + " Bilions " + NumberToText(Number % 1000000000);
   }
 };
-btn.addEventListener("click", () => {
+const showResult = () => {
   let value = input.value.trim();
   if (value.length != 0 && !isNaN(parseInt(value))) {
     if (parseInt(value) == 0) {
@@ -72,9 +72,10 @@ btn.addEventListener("click", () => {
       resultSpan.textContent = NumberToText(value);
     }
   }
-});
+};
+btn.addEventListener("click", showResult);
 input.addEventListener("keydown", (e) => {
   if (e.key == "Enter") {
-    btn.click();
+    showResult();
   }
 });
